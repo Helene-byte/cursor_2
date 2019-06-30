@@ -10,33 +10,26 @@ import java.util.Random;
 
 public class Main {
 
+    private final static int FormA = 1;
+    private final static int FormB = 2;
+    private final static int FormC = 3;
+
     public static void main(String[] args) {
 
+        Random robotChoice = new Random();
+        int planetNumber = robotChoice.nextInt(3);
 
-        RobotUI robotC = new robotC();
-        RobotUI robotA = new robotA();
-        RobotUI robotB = new robotB();
-        Random robot_choice = new Random();
-
-                robotA.activity();
-                robotB.activity();
-                robotC.activity();
-
-
-        int n = robot_choice.nextInt(12);
-            n+=1;
-            System.out.println(n);
-        if (n>=1 && n<=3){
-            System.out.println("robot A form is implemented");
-}
-        else if (n>=4 && n<=8){
-            System.out.println("robot B form is implemented");
-}
-        else if (n>=9){
-            System.out.println("robot C form is implemented");
-
-    }
-
+        RobotUI Form = null;
+        if (planetNumber == FormA) {
+            Form = new robotA();
+        }
+        if (planetNumber == FormB) {
+            Form = new robotB();
+        }
+        if (planetNumber == FormC) {
+            Form = new robotC();
+        }
 
     }
 }
+
