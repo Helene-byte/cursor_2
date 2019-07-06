@@ -14,20 +14,26 @@ public class Main {
     private final static int FormB = 2;
     private final static int FormC = 3;
 
+
     public static void main(String[] args) {
 
         Random robotChoice = new Random();
-        int planetNumber = robotChoice.nextInt(3);
 
-        RobotUI Form = null;
+
+            int planetNumber = robotChoice.nextInt(3)+1;
+
+
         if (planetNumber == FormA) {
-            Form = new robotA();
+            robotA robotA = new robotA();
+            robotA.activity();
         }
         if (planetNumber == FormB) {
-            Form = new robotB();
+            robotB robotB = new robotB();
+            robotB.activity();
         }
         if (planetNumber == FormC) {
-            Form = new robotC();
+            robotC robotC = new robotC();
+            robotC.activity();
         }
 
     }
