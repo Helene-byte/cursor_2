@@ -1,39 +1,36 @@
 package com.company;
 
 import com.company.RobotUI.RobotUI;
-import com.company.RobotUI.robotA;
-import com.company.RobotUI.robotB;
-import com.company.RobotUI.robotC;
+import com.company.RobotUI.RobotA;
+import com.company.RobotUI.RobotB;
+import com.company.RobotUI.RobotC;
 
 import java.util.Random;
 
 
 public class Main {
 
-    private final static int FormA = 1;
-    private final static int FormB = 2;
-    private final static int FormC = 3;
+    private final static int Form_A = 1;
+    private final static int Form_B = 2;
+    private final static int Form_C = 3;
 
 
     public static void main(String[] args) {
 
         Random robotChoice = new Random();
+        int planetNumber = robotChoice.nextInt(3)+1;
 
-
-            int planetNumber = robotChoice.nextInt(3)+1;
-
-
-        if (planetNumber == FormA) {
-            robotA robotA = new robotA();
-            robotA.activity();
+        if (planetNumber == Form_A) {
+            RobotA robotA = new RobotA();
+            robotA.act();
         }
-        if (planetNumber == FormB) {
-            robotB robotB = new robotB();
-            robotB.activity();
+        if (planetNumber == Form_B) {
+            RobotB robotB = new RobotB();
+            robotB.act();
         }
-        if (planetNumber == FormC) {
-            robotC robotC = new robotC();
-            robotC.activity();
+        if (planetNumber == Form_C) {
+            RobotC robotC = new RobotC();
+            robotC.act();
         }
 
     }
