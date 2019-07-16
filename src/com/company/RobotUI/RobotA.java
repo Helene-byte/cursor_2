@@ -1,9 +1,9 @@
 package com.company.RobotUI;
 
-public class robotA implements RobotUI {
+public class RobotA implements RobotUI {
 
     @Override
-    public void activity() {
+    public void act() {
         System.out.println("i'm robot A: shoot,shout,move, i'm good for planetA");
     }
 }
